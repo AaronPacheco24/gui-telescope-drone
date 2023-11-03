@@ -28,15 +28,17 @@ class Widget(QWidget):
         self.update_image_label()  # Initialize the label with the first image
 
         next_button = QPushButton("Next")
-
+        prev_button = QPushButton("Previous")
         # Connections
         next_button.clicked.connect(self.next_button_clicked)  # Go to next image.
-
+        prev_button.clicked.connect(self.prev_button_clicked)
         # Layout
-        vlayout = QVBoxLayout()
+        vlayout = QHBoxLayout()
+        vlayout.addWidget(prev_button)
         vlayout.addWidget(next_button)
-        vlayout.addWidget(self.images_label)
-        fin_layout = QHBoxLayout()
+        # vlayout.addWidget(self.images_label)
+        fin_layout = QVBoxLayout()
+        fin_layout.addWidget(self.images_label)
         fin_layout.addLayout(vlayout)
         self.setLayout(fin_layout)
 
@@ -47,6 +49,13 @@ class Widget(QWidget):
         if count >= len(images_array):
             count = 0
         self.update_image_label()  # Update the image label
+
+    def prev_button_clicked(self):
+        global count
+        count = count - 1
+        if count <= 0:
+            count = len(images_array) - 1
+        self.update_image_label()
 
     # Other methods
     def update_image_label(self):
