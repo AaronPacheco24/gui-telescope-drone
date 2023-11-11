@@ -6,6 +6,8 @@ from PySide6.QtWidgets import (
     QHBoxLayout,
 )
 from PySide6.QtGui import QPixmap
+from PySide6.QtGui import Qt
+
 import os
 
 images_array = []
@@ -23,6 +25,7 @@ class Widget(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Random")
+        self.setFixedSize(800, 600)
 
         self.images_label = QLabel()
         self.update_image_label()  # Initialize the label with the first image
@@ -62,10 +65,16 @@ class Widget(QWidget):
         if images_array:  # Make sure the array has conotents
             image_path = os.path.join(folder_dir, images_array[count])  # Update picture
             pixmap = QPixmap(image_path)  # Handling image swap
+            available_width = self.width()
+            available_height = self.height()
+            pixmap = pixmap.scaled( #resize the image to fit in window
+            available_width,
+            available_height,
+            Qt.KeepAspectRatio,
+            Qt.SmoothTransformation,
+            )
             self.images_label.setPixmap(pixmap)
-            self.images_label.setScaledContents(
-                True
-            )  # Ensure the image scales properly
+            self.images_label.setAlignment(Qt.AlignCenter) #center the image
 
 
 if __name__ == "__main__":
