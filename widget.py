@@ -25,6 +25,7 @@ class Widget(QWidget):
         self.path_line_edit.setReadOnly(True)  # read-only
 
         # Button to open file dialog
+        self.select_directory_label = QLabel("Select Directory:")
         self.browse_button = QPushButton("Browse")
         self.browse_button.clicked.connect(self.select_directory)
 
@@ -33,6 +34,7 @@ class Widget(QWidget):
 
         # Create a layout for path input
         path_layout = QHBoxLayout()
+        path_layout.addWidget(self.select_directory_label)
         path_layout.addWidget(self.path_line_edit)
         path_layout.addWidget(self.browse_button)
 
