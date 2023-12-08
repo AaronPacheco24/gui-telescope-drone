@@ -14,7 +14,7 @@ The SDP Telescope Computing Drone GUI is being created to streamline and simplif
 ## Direction  - For the team taking over
 - Ensure compatibility with Other OS
 - Interface wtih program from Sam  - thecodedkid. Which places files in directory.
-- Feel free to contact me (Aaron Pacheco) until May 20th via discord: "lairon."
+- Feel free to contact me (Aaron Pacheco) until May 20th 2024 via discord: "lairon." or by text (562) 656-6092. Tell me who you are if you decide to text.
 
 
 ## Resources
