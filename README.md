@@ -11,10 +11,10 @@ The SDP Telescope Computing Drone GUI is being created to streamline and simplif
 - PySide6 'pip install pyside6'
 - qdarktheme 'pip install pyqtdarktheme'
 
-  ## Direction  - For the team taking over
-  - Ensure compatibility with Other OS
-  - Interface wtih program from Sam  - thecodedkid. Which places files in directory.
-  - Feel free to contact me (Aaron Pacheco) until May 20th via discord: "lairon."
+## Direction  - For the team taking over
+- Ensure compatibility with Other OS
+- Interface wtih program from Sam  - thecodedkid. Which places files in directory.
+- Feel free to contact me (Aaron Pacheco) until May 20th via discord: "lairon."
 
 
 ## Resources
